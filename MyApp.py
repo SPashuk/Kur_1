@@ -9,10 +9,10 @@ with open('token', 'r') as file_tok:
     vk_access_token = file_tok.readline()
     ya_token = file_tok.readline()
     # user_id = id.replace('\n','')
-user_id = 689086032
+# user_id = 689086032
 # user_id = 10277654
 # user_id = 9297810
-# user_id = str(input('Введите id пользователя VK \nфото которого вы хотелибы загрузить например 689086032:\n'))
+user_id = str(input('Введите id пользователя VK \nфото которого вы хотелибы загрузить например 689086032:\n'))
 album_id = 'profile'
 id_album = int(input('Введите идентификатор альбома VK пользователя\n1. profile — фотографии профиля (по умолчанию)\n2. wall — фотографии со стены,\n3. saved — сохраненные фотографии\n'))
 if id_album == 2:
