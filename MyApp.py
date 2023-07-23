@@ -14,13 +14,13 @@ user_id = 689086032
 # user_id = 9297810
 # user_id = str(input('Введите id пользователя VK \nфото которого вы хотелибы загрузить например 689086032:\n'))
 album_id = 'profile'
-# id_album = int(input('Введите идентификатор альбома VK пользователя\n1. profile — фотографии профиля (по умолчанию)\n2. wall — фотографии со стены,\n3. saved — сохраненные фотографии\n'))
-# if id_album == 2:
-#     album_id = 'wall'
-# elif id_album == 3:
-#     album_id = 'saved'
-# elif id_album != 1:
-#     print('неправильный идентификатор альбома, загружаем фото из профиля')  
+id_album = int(input('Введите идентификатор альбома VK пользователя\n1. profile — фотографии профиля (по умолчанию)\n2. wall — фотографии со стены,\n3. saved — сохраненные фотографии\n'))
+if id_album == 2:
+    album_id = 'wall'
+elif id_album == 3:
+    album_id = 'saved'
+elif id_album != 1:
+    print('неправильный идентификатор альбома, загружаем фото из профиля')  
 
 def my_progress_bar(step: bytes, symvol: str ='-', max_length: int = 64, pause: float = 0.02) -> None:
     """ рисуем прогресс бар по переменной 'step' в качестве движка использеутся символв symvol по умолчанию символ - """
@@ -137,11 +137,11 @@ class YaUploader:
 
 
 # # ЗАГРУЗКА с VKontakt
-# download = VKdownload(vk_access_token,user_id,album_id)
-# download.get_photos()
+download = VKdownload(vk_access_token,user_id,album_id)
+download.get_photos()
 
 # ВЫГРУЗКА НА YANDEX РЕСУРС
-folder_ya = 'ARXIVE/'
+folder_ya = 'ARXIVE'
 
 uploader = YaUploader(ya_token, folder_ya)
 
