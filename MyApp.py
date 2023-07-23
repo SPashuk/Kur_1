@@ -133,9 +133,6 @@ class YaUploader:
         # Загрузка файла
         uploader = requests.put(url1, data=open(files_path, 'rb'))
 
-# Загрузка token vk и ya из файла token
-
-
 # # ЗАГРУЗКА с VKontakt
 download = VKdownload(vk_access_token,user_id,album_id)
 download.get_photos()
